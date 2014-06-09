@@ -1,0 +1,58 @@
+<%= form_for @post, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :project_name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :project_name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :quick_pitch, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :quick_pitch, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :full_pitch, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :full_pitch, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :youtube_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :youtube_id, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :to_the_table, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :to_the_table, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :compensation_method, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :compensation_method, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :location, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :location, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :tags, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :tags, :class => 'text-field form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  posts_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>

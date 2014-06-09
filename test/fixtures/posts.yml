@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_name: MyString
+  quick_pitch: MyText
+  full_pitch: MyText
+  user_id: 
+  youtube_id: MyString
+  to_the_table: MyText
+  compensation_method: MyText
+  location: MyString
+  tags: MyText
+
+two:
+  project_name: MyString
+  quick_pitch: MyText
+  full_pitch: MyText
+  user_id: 
+  youtube_id: MyString
+  to_the_table: MyText
+  compensation_method: MyText
+  location: MyString
+  tags: MyText
