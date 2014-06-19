@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
 	
 	.text-light h1, .text-light h2, .text-light h3, .text-light h4, .text-light h5, .text-light h6 { color: #ffffff; }
 
-h1 { font-size: 100px; line-height: 130px; }
+h1 { font-size: 45px; line-height: 60px; }
 h2 { font-size: 40px; line-height: 60px; }
 h3 { font-size: 32px; line-height: 48px; }
 h4 { font-size: 22px; line-height: 34px; }
@@ -2259,7 +2259,7 @@ countdown-caption {
 ------------------------------------------------*/
 #facts.parallax-section { background:url(./parallax-bg1.jpg) center center repeat; background-size: cover; } /* index */
 #testimonials.parallax-section { background:url(./parallax-bg2.jpg) center center repeat; background-size: cover; } /* index */
-#passionate.parallax-section { background:url(./coverimage.jpg) center center repeat; background-size: cover; } /* index */
+#passionate.parallax-section { background:url(./.jpg) center center repeat; background-size: cover; } /* index */
 #passionate.parallax-section2 { background:url(./uploads/headerbg2.jpg) center center repeat; background-size: cover; } /* index */
 
 #purchase.parallax-section { background:url(./parallax-bg3.jpg) center center repeat; background-size: cover; } /* index-headeroverlay */
