@@ -2259,7 +2259,7 @@ countdown-caption {
 ------------------------------------------------*/
 #facts.parallax-section { background:url(./parallax-bg1.jpg) center center repeat; background-size: cover; } /* index */
 #testimonials.parallax-section { background:url(./parallax-bg2.jpg) center center repeat; background-size: cover; } /* index */
-#passionate.parallax-section { background:url(./parallax-bg3.jpg) center center repeat; background-size: cover; } /* index */
+#passionate.parallax-section { background:url(./coverimage.jpg) center center repeat; background-size: cover; } /* index */
 #passionate.parallax-section2 { background:url(./uploads/headerbg2.jpg) center center repeat; background-size: cover; } /* index */
 
 #purchase.parallax-section { background:url(./parallax-bg3.jpg) center center repeat; background-size: cover; } /* index-headeroverlay */

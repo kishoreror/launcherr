@@ -17,7 +17,7 @@
 		 <!-- Bootstrap CSS-->
     <link href="/files/css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<!-- CSS -->
-
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<!-- FAVICON -->
 		<link rel="shortcut icon" href="files/uploads/favicon.png"/>
 		<!-- FAVICON -->
@@ -40,8 +40,8 @@
 				<div class="header-inner wrapper clearfix">
 
 					<div id="logo" class="left-float">
-						<a id="defaut-logo" class="logotype" href="index.html">
-						<%= image_tag("xone-logo.png", :size => "64x64", :alt => "Show Group") %></a>
+						<a id="defaut-logo" class="logotype" href="/">
+						<%= image_tag("headerlogo.png", :size => "64x64", :alt => "Show Group") %></a>
 					</div>
 
 					<div class="menu left-float clearfix">
@@ -70,21 +70,16 @@
 							<ul>
 							
 								<li>
-									<a href="elements.html">My Account</a>
+									<a href="elements.html">Welcome, User.</a><!-- users first name -->
 									<ul class="sub-menu">
 
 										<li>
-											<a href="portfolio-layout.html">My Projects</a>
+											<a href="#myaccount"> <i class="fa fa-cogs"> </i> My Account</a>
 										</li>
-										<li>
-											<a href="portfolio-layout.html">My Account</a>
-										</li>
-										<li>
-											<a href="portfolio-layout.html">Inbox</a>
-										</li>
-										<li>
-											<a href="portfolio-layout.html">Logout</a>
-										</li>
+								
+									  <li>
+											<a href="#logout"><i class="fa fa-sign-out"> </i> Logout</a> 
+									  </li>
 								</li>
 							</ul>
 							</li>
@@ -110,7 +105,7 @@
 				<footer>
 				  <div class="footerinner wrapper align-center text-light">
 						<a id="backtotop" href="#" class="sr-button sr-buttonicon small-iconbutton"><i class="fa fa-angle-up"></i></a>
-						<p class="footer-logo"><%= image_tag("xone-logo-footer.png", :size => "64x64", :alt => "Footer Logo") %></a>
+						<p class="footer-logo"><%= image_tag("http://blog.launcherr.com/wp-content/uploads/2014/06/footerlogo.png", :size => "", :alt => "Launcherr") %></a>
 						</p>
 					<ul class="socialmedia-widget social-share">
 							<li class="facebook">
