@@ -11,6 +11,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Launcherr | Crowdsource Skills To Launch Ideas</title>
+		<!-- FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,600|Raleway:300,600,900' rel='stylesheet' type='text/css'>
+		<!-- FONTS -->
+		 <!-- Bootstrap CSS-->
+    <link href="/files/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<!-- CSS -->
+
+		<!-- FAVICON -->
+		<link rel="shortcut icon" href="files/uploads/favicon.png"/>
+		<!-- FAVICON -->
+
+		<!-- JQUERY LIBRARY & MODERNIZR -->
+		<script src="files/js/jquery-1.9.1.min.js"></script>
+		<script src='files/js/jquery.modernizr.min.js'></script>
+		<!-- JQUERY LIBRARY & MODERNIZR -->
+
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -19,12 +35,13 @@
 <body>
 <%= render partial: "elements/navbar" %>
 <%= bootstrap_flash %>
-
+<div id="page-content" class="fixed-header">
 <header id="header">
 				<div class="header-inner wrapper clearfix">
 
 					<div id="logo" class="left-float">
-						<a id="defaut-logo" class="logotype" href="index.html"><img src="/assets/images/xone-logo.png" alt="Logo"></a>
+						<a id="defaut-logo" class="logotype" href="index.html">
+						<%= image_tag("xone-logo.png", :size => "64x64", :alt => "Show Group") %></a>
 					</div>
 
 					<div class="menu left-float clearfix">
@@ -80,26 +97,20 @@
 				</div>
 				<!-- END .header-inner -->
 			</header>
-
-			<!-- PASSIONATE -->
-		<div id="passionate" class="horizontalsection text-light parallax-section">
-			<div class="horizontalinner wrapper align-center">
-			  <h2> build cool things with cool people				</h2>
-				<div class="spacer spacer-small"></div>
-				<p>
-					<a href="application.html" class="scroll-to sr-button sr-button4 medium-button">Launch Idea</a>
-				</p>
-			</div>
 		</div>
+            
+		
 
 
 <%= yield %>
+
+
 
 <!-- FOOTER -->
 				<footer>
 				  <div class="footerinner wrapper align-center text-light">
 						<a id="backtotop" href="#" class="sr-button sr-buttonicon small-iconbutton"><i class="fa fa-angle-up"></i></a>
-						<p class="footer-logo"><img src="files/uploads/xone-logo-footer.png" alt="Footer Logo">
+						<p class="footer-logo"><%= image_tag("xone-logo-footer.png", :size => "64x64", :alt => "Footer Logo") %></a>
 						</p>
 					<ul class="socialmedia-widget social-share">
 							<li class="facebook">
@@ -123,6 +134,14 @@
 					</div>
 		  </footer>
 				<!-- FOOTER -->
+			<script>
+				$( 'document' ).ready( function( ) {
+					//INITIALIZE THE PLUGIN
+					$( '#grid' ).grid( );
+
+				} );
+
+			</script>
                 
 
 </body>

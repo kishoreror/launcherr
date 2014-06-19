@@ -1980,7 +1980,7 @@ a.sr-buttonicon.small-iconbutton {
 	width: 30px;
 	display: block;
 	text-indent: -9999px;
-	background: url(../images/social-icons.png);
+	background: url(./social-icons.png);
 	margin: 0;
 	}
 	
@@ -2257,11 +2257,14 @@ countdown-caption {
 	
 /*	parallax bg sections
 ------------------------------------------------*/
-#facts.parallax-section { background:url(../uploads/parallax-bg1.jpg) center center repeat; background-size: cover; } /* index */
-#testimonials.parallax-section { background:url(../uploads/parallax-bg2.jpg) center center repeat; background-size: cover; } /* index */
-#passionate.parallax-section { background:url(../uploads/parallax-bg3.jpg) center center repeat; background-size: cover; } /* index */
-#purchase.parallax-section { background:url(../uploads/parallax-bg3.jpg) center center repeat; background-size: cover; } /* index-headeroverlay */
-#quote.parallax-section { background:url(../uploads/parallax-bg3.jpg) center center repeat; background-size: cover; } /* index-headeroverlay*/
+#facts.parallax-section { background:url(./parallax-bg1.jpg) center center repeat; background-size: cover; } /* index */
+#testimonials.parallax-section { background:url(./parallax-bg2.jpg) center center repeat; background-size: cover; } /* index */
+#passionate.parallax-section { background:url(./parallax-bg3.jpg) center center repeat; background-size: cover; } /* index */
+#passionate.parallax-section2 { background:url(./uploads/headerbg2.jpg) center center repeat; background-size: cover; } /* index */
+
+#purchase.parallax-section { background:url(./parallax-bg3.jpg) center center repeat; background-size: cover; } /* index-headeroverlay */
+#quote.parallax-section { background:url(./parallax-bg3.jpg) center center repeat; background-size: cover; } /* index-headeroverlay*/
+
 
 /*	dark bg sections
 ------------------------------------------------*/
