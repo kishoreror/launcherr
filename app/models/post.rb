@@ -4,5 +4,5 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :coverimage, :content_type => /\Aimage\/.*\Z/
  # validates_formatting_of :youtube_id, using: :url
   acts_as_votable 
-  as
+  
 end
