@@ -33,6 +33,7 @@
 <!-- Prelang: Analytics / Google Analytics -->
     <%= analytics_init if Rails.env.production? %><meta name="viewport" content="width=device-width, initial-scale=1"/></head>
 <body>
+<!-- header -->
 <%= render partial: "elements/navbar" %>
 <%= bootstrap_flash %>
 <div id="page-content" class="fixed-header">
@@ -66,33 +67,45 @@
 					</div>
 					<center>
 					<div class="right-float" style="text-align: left">
+					<!-- Logged in Header-->	
+<% if defined?(Devise) %>
+        <% if user_signed_in? %>
 						<nav id="main-nav">
 							<ul>
 							
-								<li>
-									<a href="elements.html">Welcome, User.</a><!-- users first name -->
+								<li> 
+									<a href="">Welcome, .</a><!-- users first name -->
 									<ul class="sub-menu">
 
-										<li>
-											<a href="#myaccount"> <i class="fa fa-cogs"> </i> My Account</a>
+									
+											<li><%= link_to "My Account", edit_user_registration_path %></li>
 										</li>
 								
 									  <li>
-											<a href="#logout"><i class="fa fa-sign-out"> </i> Logout</a> 
+											<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
 									  </li>
 								</li>
 							</ul>
 							</li>
 
 							</ul>
+							<!-- END Logged in Header -->
+<% else %>
+				<div class="right-float" style="text-align: left">
+						<nav id="main-nav">
+							<ul>
+          <li><%= link_to "Login", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <% end %>
+      <% end %>
 						</nav>
 					</div>
 					</center>
 
 				</div>
-				<!-- END .header-inner -->
-			</header>
+				</header>
 		</div>
+			
             
 		
 
@@ -105,7 +118,7 @@
 				<footer>
 				  <div class="footerinner wrapper align-center text-light">
 						<a id="backtotop" href="#" class="sr-button sr-buttonicon small-iconbutton"><i class="fa fa-angle-up"></i></a>
-						<p class="footer-logo"><%= image_tag("http://blog.launcherr.com/wp-content/uploads/2014/06/footerlogo.png", :size => "", :alt => "Launcherr") %></a>
+						<p class="footer-logo"><%= image_tag("/footerlogo.png", :size => "", :alt => "") %></a>
 						</p>
 					<ul class="socialmedia-widget social-share">
 							<li class="facebook">
