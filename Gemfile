@@ -58,4 +58,4 @@ gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
 gem 'validates_formatting_of'
 gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 gem 'bootstrap-sass-extras'
-gem "paperclip", "~> 4.1"
+gem 'paperclip', github: 'thoughtbot/paperclip'
