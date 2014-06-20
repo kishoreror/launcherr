@@ -1,8 +1,4 @@
-<div id="portfolio-singlee" class="section-innere">
-          <div class="wrapper clearfix">
-
-              <strong><div class="main-content left-float">  <form class="dialog-form"></strong>
-<%= form_for @post, :html => { :class => 'form-horizontal form-model' , :multipart => true } do |f| %>
+<%= form_for @post ,:html => { :class => 'form-horizontal form-model' , :multipart => true} do |f| %>
   <div class="form-group">
     <%= f.label :project_name, :class => 'control-label col-md-2' %>
     <div class="col-md-10">
@@ -19,6 +15,12 @@
     <%= f.label :coverimage, :class => 'control-label col-md-2' %>
     <div class="col-md-10">
       <%= f.file_field :coverimage, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :logoimage, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.file_field :logoimage, :class => 'text-field form-control' %>
     </div>
   </div>
   
