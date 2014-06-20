@@ -178,7 +178,6 @@ textarea {
   }
   a,
   a:visited {
-    text-decoration: underline;
   }
   a[href]:after {
     content: " (" attr(href) ")";
@@ -238,7 +237,6 @@ a {
 a:hover,
 a:focus {
   color: #005580;
-  text-decoration: underline;
 }
 
 .img-rounded {
@@ -3598,7 +3596,6 @@ input[type="submit"].btn.btn-mini {
 .btn-link:hover,
 .btn-link:focus {
   color: #005580;
-  text-decoration: underline;
   background-color: transparent;
 }
 

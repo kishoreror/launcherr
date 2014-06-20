@@ -1,3 +1,4 @@
+
 <div id="portfolio-singlee" class="section-innere">
           <div class="wrapper clearfix">
 
@@ -9,10 +10,10 @@
       <%= f.text_field :project_name, :class => 'text-field form-control' %>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group"><span id="remain">0</span> / 140 characters remaining
     <%= f.label :quick_pitch, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_area :quick_pitch, :class => 'text-field form-control' %>
+    <div class="col-md-3">
+      <%= f.text_area :quick_pitch, :class => 'text-field form-control' %></span>
     </div>
   </div>
   <div class="form-group">
@@ -28,6 +29,33 @@
       <%= f.text_area :full_pitch, :class => 'text-field form-control' %>
     </div>
   </div>
+
+<!-- Add team members-->
+<p> What type of skills do you want on your team?</p>
+   <input type="text" placeholder="" id="team" class="span4">
+<a href="#" onclick="return false;" id="addField"> <i class="fa  fa-plus-circle"></i>  Add New Skill</a> <br><br>
+        <input type="text" placeholder="" id="teams" class="span4" style="border: 0px;"><br>
+        
+        <script>
+        $(document).ready(function(){
+            $( "#addField" ).click(function( event ) {
+              var x=document.getElementById("team").value;
+              var y=document.getElementById("teams").value;
+              
+              if (y != "") {
+                var z = y+', '+x;
+              }
+              else{
+                var z = x;
+              }
+              
+              $("#teams").val(z);
+              $("#team").val('');
+              
+            });
+          });
+        
+        </script>
  
   <div class="form-group">
     <%= f.label :youtube_id, :class => 'control-label col-md-2' %>
@@ -69,3 +97,18 @@
   </div>
 <% end %>
 </div></div></div>
+
+<script> 
+
+var maxchars = 140;
+
+$('textarea').keyup(function() {
+    var tlength = $(this).val().length;
+    $(this).val($('textarea').val().substring(0,maxchars));
+    var tlength = $(this).val().length;
+    remain = maxchars - parseInt(tlength);
+    $('#remain').text(remain);
+});
+</script>
+
+
