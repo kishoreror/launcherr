@@ -1,9 +1,12 @@
 <div id="portfolio-singlee" class="section-innere">
           <div class="wrapper clearfix">
 <br><br><br>
-              <div class="main-content left-float">  <form class="dialog-form"><div class="page-header">
+              <section id="portfolio"> 
+                <form class="dialog-form"><div class="page-header">
   <h3><%=t ".title", default: "Welcome to Launcherr" %></h3>
 </div>
+
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form-horizontal form-user"}) do |f| %>
   <%= devise_error_messages! %>
@@ -40,15 +43,20 @@
      <br><br>
   <div class="form-group">
     <div class="col-md-offset-4 col-md-8">
-      <%= f.submit "Sign Up", class: "btn btn-primary" %>
+      <%= f.submit "Sign Up", class: "sr-button sr-button3 medium-button" %>
     </div>
   </div>
-
+<br><br>
   <div class="form-group">
     <div class="col-md-offset-4 col-md-8">
       <%= render "devise/shared/links" %>
     </div>
-  </div></div></div></div>
+  </div></div></div></div><br><br>
+  <aside class="right-float">
+
+  <p> xx </p>
+</aside>
+
 
 <% end %>
 
