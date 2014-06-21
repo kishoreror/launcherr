@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/collectiveidea/delayed_job.git
-  revision: 5b08ccddfc2b9840cdcfdc5441acf9ca3f0c2631
+  revision: 62fd8ab7d5fac020d65e4c0894a60691f59d32c2
   specs:
     delayed_job (4.0.1)
       activesupport (>= 3.0, < 4.2)
@@ -32,7 +32,7 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/devise.git
-  revision: f0738098f04316fa0fa9df0313c5cc2a7c84c775
+  revision: eeb6060d9df0aac63d2f8cc90895941b30ba1c0f
   specs:
     devise (3.2.4)
       bcrypt (~> 3.0)
@@ -43,7 +43,7 @@ GIT
 
 GIT
   remote: git://github.com/ryanto/acts_as_votable.git
-  revision: bf6104266406967f99667da407b8f21f1a28831b
+  revision: 422637c266b021035a87ebef4a69c5cc76a05eb2
   specs:
     acts_as_votable (0.10.0)
 
@@ -59,7 +59,7 @@ GIT
 
 GIT
   remote: git://github.com/twbs/bootstrap-sass.git
-  revision: e2e70208d5c8e0f177e45b45d872ba592f987ad9
+  revision: 380fb83045f8417c23c6b6ad9310e545621032b7
   specs:
     bootstrap-sass (3.1.1.1)
       autoprefixer-rails (~> 1.1)
@@ -95,7 +95,7 @@ GEM
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (4.0.2)
-    autoprefixer-rails (1.3.0.20140619)
+    autoprefixer-rails (1.1.20140605)
       execjs
     bcrypt (3.1.7)
     bootstrap-sass-extras (0.0.6)
@@ -125,7 +125,7 @@ GEM
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
-    hashie (2.1.2)
+    hashie (2.1.1)
     hike (1.2.3)
     i18n (0.6.9)
     inherited_resources (1.5.0)
@@ -141,7 +141,7 @@ GEM
       railties (>= 3.2.16)
     json (1.8.1)
     jwt (1.0.0)
-    kaminari (0.16.1)
+    kaminari (0.16.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     mail (2.5.4)
@@ -232,7 +232,7 @@ GEM
     turbolinks (2.2.2)
       coffee-rails
     tzinfo (0.3.39)
-    uglifier (2.5.1)
+    uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     validates_formatting_of (0.8.1)
