@@ -20,3 +20,5 @@ config/settings/*.local.yml
 config/environments/*.local.yml
 
 app/views/posts/_form.html.erb
+
+app/views/posts/_form.html.erb
