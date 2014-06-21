@@ -18,7 +18,10 @@
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
+<<<<<<< HEAD
 
 app/views/posts/_form.html.erb
 
 app/views/posts/_form.html.erb
+=======
+>>>>>>> parent of b714f60... Merge branch 'master' of https://github.com/kishorecherukuror/new_launcherr
