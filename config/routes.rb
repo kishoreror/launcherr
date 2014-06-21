@@ -1,10 +1,12 @@
 Launcherr::Application.routes.draw do
   resources :posts do
   #->Prelang (voting/acts_as_votable)
+  get "projectpage1"
   member do
     get "vote"
   end
 end
+
 
 
   devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords", omniauth_callbacks: "users/omniauth_callbacks"}, skip: [:sessions, :registrations]

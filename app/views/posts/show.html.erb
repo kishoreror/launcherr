@@ -21,6 +21,10 @@
       <dd><pre class="prettyprint"><%= @post.location %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:tags) %></dt>
       <dd><pre class="prettyprint"><%= @post.tags %></pre></dd>
+       <dt class="label label-default"><%= model_class.human_attribute_name(:coverimage) %></dt>
+      <dd><pre class="prettyprint"><%=image_tag @post.coverimage.url %></pre></dd>
+       <dt class="label label-default"><%= model_class.human_attribute_name(:logoimage) %></dt>
+      <dd><pre class="prettyprint"><%=image_tag @post.logoimage.url %></pre></dd>
   </dl>
 </div>
 

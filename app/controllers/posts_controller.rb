@@ -28,8 +28,14 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.create(post_params)
-   @post.user = current_user
+
+    @post = Post.new(post_params)
+    @post.user = current_user
+    
+  #  @post = Post.create(post_params)
+
+
+# @post.user = current_user
 
     respond_to do |format|
       if @post.save
@@ -40,6 +46,7 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /posts/1

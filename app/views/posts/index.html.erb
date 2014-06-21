@@ -27,6 +27,8 @@
       <th><%= model_class.human_attribute_name(:compensation_method) %></th>
       <th><%= model_class.human_attribute_name(:location) %></th>
       <th><%= model_class.human_attribute_name(:tags) %></th>
+      <th><%= model_class.human_attribute_name(:coverimage) %></th>
+      <th><%= model_class.human_attribute_name(:logoimage) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -42,7 +44,10 @@
         <td><%= post.to_the_table %></td>
         <td><%= post.compensation_method %></td>
         <td><%= post.location %></td>
+        
         <td><%= post.tags %></td>
+        <td><%=image_tag post.coverimage ,width: '20', height: '20' %></td>
+        <td><%=image_tag post.logoimage.url %></td>
         <td><%=l post.created_at, format: :long %></td>
         <td>
           <%= link_to post_path(post), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
