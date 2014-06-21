@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   #->Prelang (scaffolding:rails/scope_to_user)
-  before_filter :require_user_signed_in, only: [:new, :edit, :create, :update, :destroy]
+ # before_filter :require_user_signed_in, only: [:new, :edit, :create, :update, :destroy]
 
   before_action :set_post, only: [:show, :edit, :update, :destroy, :vote]
 
@@ -28,8 +28,14 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.create(post_params)
-   @post.user = current_user
+
+    @post = Post.new(post_params)
+    @post.user = current_user
+    
+  #  @post = Post.create(post_params)
+
+
+# @post.user = current_user
 
     respond_to do |format|
       if @post.save
@@ -40,6 +46,7 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /posts/1
