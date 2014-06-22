@@ -30,6 +30,8 @@
       <th><%= model_class.human_attribute_name(:coverimage) %></th>
       <th><%= model_class.human_attribute_name(:logoimage) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
+
+      <!-- Add Skills Needed -->
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -68,6 +70,22 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_post_path,
             :class => 'btn btn-primary' %></div>
+
+            <!-- Grid Gallery --> 
+
+            <!-- GRID SEARCH -->
+    <div class="spacer spacer-big"></div>
+    <div class="container" style="padding-right:50px;padding-left:50px;">
+
+      <div id="grid">
+        <div class="box"
+
+        <div class="thumbnail-caption">
+            <h3g>
+              Project Name
+            </h3g>
+
+      </div></div></div></div>
 
             <script>
         $( 'document' ).ready( function( ) {
