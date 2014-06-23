@@ -1,31 +1,46 @@
- <%- model_class = Post -%>
- <div class="page-body">
 
-<div class="top-area">
-      <%=image_tag @post.coverimage.url %></div>
-</div>
+     <title><%= @post.project_name %>| Launcherr </title>
+      <!-- PAGEBODY -->
+      <div class="page-body"></div>
+        <!-- Cover Photo -->
+        <div class="top-area">
+          <%=image_tag @post.coverimage.url %></div>
+        </div>
+          <ul class="socialmedia-widget social-share">
+            <li class="facebook">
+              <a href="">Facebook</a>
+            </li>
+            <li class="twitter">
+              <a href="">Tweet</a>
+            </li>
+            <li class="googleplus">
+              <a href="">Google Plus</a>
+            </li>
+            <li class="pinterest">
+              <a href="">Pinterest</a>
+            </li>
+          </ul><br>
+        </div>
 
- <!-- LOGO/SQUARE PHOTO -->
-                
 
-<section id="portfolio">
+        <!-- MAIN PITCH SECTION -->
+        <section id="portfolio">
           <div id="portfolio-singlee" class="section-innere">
             <div class="wrapper clearfix">
 
               <div class="main-content left-float">
-
-
-  <!-- VIDEO SECTION --><br><br>
-                                
+                <!-- VIDEO SECTION -->
                 <div class="entry-media portfolio-media">
-                  <iframe width="400" height="230" src="<%= @post.youtube_id %>" frameborder="0" scrolling="no"></iframe>
+                  <iframe width="400" height="230" src="https://www.kickstarter.com/projects/sdw/ride-north-a-moto-photographic-journey-from-sf-to/widget/video.html
+                                    " frameborder="0" scrolling="no"> </iframe>
 
                 </div>
                 <!-- MAIN DESCRIPTION -->
                 <br> <h6><strong>About <%= @post.project_name %> </h6></strong>
 <br><%= @post.full_pitch %>
 <br>
-  <!-- COMPENSATION --></p>
+
+              <!-- COMPENSATION --></p>
               <h6><strong> How  You Will Be Compensated</strong></h6>
               <p><%= @post.compensation_method %></p>
 
@@ -35,65 +50,95 @@
 
               <p><%= @post.to_the_table %>
                 <br> <br> 
-                 <a href="#" class="sr-button sr-button5 big-button">JØIN TEAM</a>
+                 <a href="#" class="sr-button sr-button5 big-button">JØIN TEAM</a> </div>
 
-                 <!-- SideBar -->
-                  <div class="entry-content portfolio-content"> <h4>&nbsp;</h4>
+                <!-- END .main-content -->
+
+                <!-- PROJECT INFO // SIDEBAR -->
+              </p>
+              <aside class="right-float">
+                            
+                <!-- Start Location -->
+                <div class="entry-content portfolio-content">
+                
                   <h4><strong><%= @post.project_name %></strong></h4></div>
                   <h6> <i class="fa fa-map-marker"> </i> <%= @post.location %></h6>
                   <h6> <i class="fa fa-link"> </i> Project URL Needed</h6>
                   <h6> <i class="fa fa-clock-o"> </i><%= @post.created_at %></i>.</h6><br><br>
-                  <h6><strong> TEAM NEEDED</strong></h6><br>
+                  <p><!-- END LOCATION -->
+                                  
+                                   <!-- START QUICK PITCH -->
+                                  <p> <%= @post.quick_pitch %> </p><br><br><br>
+                                  <!-- TEAM NEEDED -->
 
-                   <a href="#" class="sr-button sr-button5 big-button">JØIN TEAM</a>
-<!-- END LOCATION -->
-<!-- START WEB URL -->
-<!-- END WEB URL -->
-<!-- Post Date (date when idea was posted on launcherr) -->
+                                  <div class="entry-content portfolio-content"> <h4><strong> Team Needed</strong></h4></div>
 
+                  <ul>
+                    • Architect
+                  </ul>
+                  <ul>
+                    • Timber Specialist
+                  </ul>
+                  <ul>
+                    • 
+                  Plumber
+                  </ul>
+                  <ul>
+                    • Electrician
+              </ul>
+                  <ul>
+                    <p>
+                    • Handyman                  </p><br>
+                  </ul>
+                                  <br>
+                                  <a data-toggle="modal" href="#apply" class="sr-button sr-button5 big-button">JØIN TEAM</a></p>
+                                  
+                                
+                    <!-- END COUNTDOWN -->
+                    
+              
+                        
 
+                  <!-- START TAGS  -->
+                                     <div class="widget tag-widget">
+                      <h6 class="widget-title"><strong>Tags</strong></h6>
+                      <div class="tag-list">
+                        <a href="#" title="design Tag" class="design-2">Tech</a> 
+                        <a href="#" title="fiji Tag" class="fiji">App</a> 
+                        <a href="#" title="motion Tag" class="motion-2">Startup</a> 
+                        <a href="#" title="music Tag" class="music-2">Idea</a> 
+                        <a href="#" title="photography Tag" class="photography-2">photography</a> 
+                        <a href="#" title="surf Tag" class="surf">Team</a> 
+                    </div>
+                </div> <br><br>
 
+                  <!-- For Post Authors -->
 
-<div class="fieldset">
-  <dl>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:project_name) %></dt>
-      <dd><pre class="prettyprint"><%= @post.project_name %></pre></dd>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:quick_pitch) %></dt>
-      <dd><pre class="prettyprint"><%= @post.quick_pitch %></pre></dd>
-
-      <dt class="label label-default"><%= model_class.human_attribute_name(:coverimage) %></dt>
-      <dd><pre class="prettyprint"><%= @post.coverimage %></pre></dd>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:logoimage) %></dt>
-      <dd><pre class="prettyprint"><%= @post.logoimage %></pre></dd>
-
-      <dt class="label label-default"><%= model_class.human_attribute_name(:full_pitch) %></dt>
-      <dd><pre class="prettyprint"><%= @post.full_pitch %></pre></dd>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:youtube_id) %></dt>
-      <dd><pre class="prettyprint"><%= @post.youtube_id %></pre></dd>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:to_the_table) %></dt>
-      <dd><pre class="prettyprint"><%= @post.to_the_table %></pre></dd>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:compensation_method) %></dt>
-      <dd><pre class="prettyprint"><%= @post.compensation_method %></pre></dd>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:location) %></dt>
-      <dd><pre class="prettyprint"><%= @post.location %></pre></dd>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:tags) %></dt>
-      <dd><pre class="prettyprint"><%= @post.tags %></pre></dd>
-       <dt class="label label-default"><%= model_class.human_attribute_name(:coverimage) %></dt>
-      <dd><pre class="prettyprint"><%=image_tag @post.coverimage.url %></pre></dd>
-       <dt class="label label-default"><%= model_class.human_attribute_name(:logoimage) %></dt>
-      <dd><pre class="prettyprint"><%=image_tag @post.logoimage.url %></pre></dd>
-  </dl>
-</div>
-
-<div class="form-group">
-  <%= link_to t('.back', :default => t("helpers.links.back")),
-              posts_path, :class => 'btn btn-default'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_post_path(@post), :class => 'btn btn-default' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               post_path(@post),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
-</div></div></div></div>
+                                  
+                
+                    
+                    <!-- In the future we will build a countdown & and insert it here. -->
+                    <!-- End tag-widget -->
+                                     
+                                
+                               
+                                
+                            <!-- SIDEBAR -->
 
+      </div>
+            <!-- END .wrapper -->
+
+            <div class="spacer spacer-big"></div>
+
+          </div>
+          <!-- END #portfolio-single .section-inner --><!-- END SECTION #portfolio-->
+        <!-- PORTFOLIO SECTION -->
+
+        <!-- FOOTER -->
