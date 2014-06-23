@@ -102,7 +102,14 @@
 				</header>
 		</div>
 			
-            
+                      
+	<% if flash[:error] %>
+  <p class="error" > <%= flash[:error].html_safe %></p><br />
+<%end%>
+<% if flash[:alert] %>
+  <p class="error" > <%= flash[:alert].html_safe %></p><br />
+<%end%>
+
 		
 
 

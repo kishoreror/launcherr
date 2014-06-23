@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :user
+ 
+
  has_attached_file :coverimage 
  has_attached_file :logoimage 
 
