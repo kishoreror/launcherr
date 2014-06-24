@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622081511) do
+ActiveRecord::Schema.define(version: 20140624093323) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(version: 20140622081511) do
     t.string   "logoimage_content_type"
     t.integer  "logoimage_file_size"
     t.datetime "logoimage_updated_at"
+    t.string   "url"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree

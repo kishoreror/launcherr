@@ -1,6 +1,6 @@
  
 <!--CSS-->
-
+<link rel="stylesheet" href="css/gridGallery.css" /> 
  <!-- PASSIONATE -->
       <div id="passionate" class="horizontalsection text-light parallax-section">
       <div class="horizontalinner wrapper align-center">
@@ -11,213 +11,43 @@
         </p>
       </div>
     </div>
-<%- model_class = Post -%>
 
 
-<div class="spacer spacer-big"></div>
-    <div class="container" style="padding-right:50px;padding-left:50px;">
+    <% @posts.each do |post| %>
+  
 
-      <div id="grid">
 
+<div id="grid">
+     <div class="container" style="padding-right:50px;padding-left:50px;">
+        
         <div class="box" data-category="Drawings">
-          <div data-thumbnail="INSERT POST_LOGO">
+            <div data-thumbnail="<%=post.logoimage.url %>" ></div>
+            
+            <div class="thumbnail-caption">
+                   <h5g>
+                <i class="fa fa-map-marker"> </i>  
+                  </h5g>
+            </div>
+                      <h6g>
+                   Quick Pitch 
+                      </h6g>
+         </div>
+      </div>
+</div>  
+<!-- SCRIPTS FOR THE PLUGIN -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/rotate-patch.js"></script>
+<script src="js/gridGallery.min.js"></script>
 
-            <div class="box" data-category="Photography">
-          <div data-thumbnail="gallery/random/nature.jpg" ></div>
+   <%- end -%>
 
-          <div data-image="projectpage.html" ></div>
 
-          <div class="thumbnail-caption">
-            <h3g>
-              Nature
-            </h3g>
-            <br>
-            <h5g>
-              <i class="fa fa-map-marker"> </i> New York City</i>
-              <br>
-              <h6g>
-                We've all heard of the elevator pitch: the brief overview of a product or servicethat can be delivered in time it takes to ride an elevator.
-              </h6g>
-          </div>
-        </div>
 
-        <div class="box" data-category="Illustrations">
-          <div data-thumbnail="gallery/random/nonserif.jpg" ></div><div class="thumbnail-caption">
-            <h3g>
-              Non Serif
-            </h3g>
-            <br>
-            <h5g>
-              <i class="fa fa-map-marker"> </i> New York City</i>
-              <br>
-              <h6g>
-                We've all heard of the elevator pitch: the brief overview of a product or servicethat can be delivered in time it takes to ride an elevator.
-              </h6g>
-          </div>
+ 
 
-        </div>
 
-        <div class="box" data-category="Photography">
-          <div data-thumbnail="gallery/random/slingshot.jpg" ></div>
+
+
+
 
           
-
-          <div class="thumbnail-caption">
-            <h3g>
-              Slingshot
-            </h3g>
-            <br>
-            <h5g>
-              <i class="fa fa-map-marker"> </i> New York City</i>
-              <br>
-              <h6g>
-                We've all heard of the elevator pitch: the brief overview of a product or servicethat can be delivered in time it takes to ride an elevator.
-              </h6g>
-          </div>
-
-          <div class="lightbox-text">
-            Yellow Lenses <span>In Photography</span>
-          </div>
-        </div>
-
-        <div class="box" data-category="Drawings">
-          <div data-thumbnail="gallery/random/logcabin.jpg" ></div>
-
-          <div class="thumbnail-caption">
-            <h3g>
-              A Snowy Log Cabin
-            </h3g>
-            <br>
-            <h5g>
-              <i class="fa fa-map-marker"> </i> Sydney,  Australia</i>
-              <br>
-              <h6g>
-                We are building a log cabin in the snowy mountains of Australia. Help us build it and stay for free every year!
-              </h6g>
-          </div>
-
-          <div class="lightbox-text">
-            Watercolor <span>In Drawings</span>
-          </div>
-        </div>
-
-        <div class="box" data-category="Illustrations">
-          <div data-thumbnail="gallery/random/stockphoto.jpg" ></div>
-
-          <div class="thumbnail-caption">
-            <h3g>
-              Stock Photo
-            </h3g>
-            <br>
-            <h5g>
-              <i class="fa fa-map-marker"> </i> New York City</i>
-              <br>
-              <h6g>
-                We've all heard of the elevator pitch: the brief overview of a product or servicethat can be delivered in time it takes to ride an elevator.
-              </h6g>
-          </div>
-
-          <div class="lightbox-text">
-            Muffin Bride <span>In Illustrations</span>
-          </div>
-        </div>
-
-        <div class="box" data-category="Photography">
-          <div data-thumbnail="gallery/Photography/thumbnails/Sunny Day.jpg" ></div>
-
-          <div data-image="gallery/Photography/Sunny Day.jpg" ></div>
-
-          <div class="thumbnail-caption">
-            <h3>Sunny Day</h3>
-            <h5>In Photography</h5>
-          </div>
-
-          <div class="lightbox-text">
-            Sunny Day <span>In Photography</span>
-          </div>
-        </div></div></div></div>
-
-
-
-
-
-
-
-
-<div class="page-header">
-  <h4><%=t '.title', :default => Post %></h4>
-</div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th><%= model_class.human_attribute_name(:project_name) %></th>
-      <th><%= model_class.human_attribute_name(:quick_pitch) %></th>
-      <th><%= model_class.human_attribute_name(:full_pitch) %></th>
-      <th><%= model_class.human_attribute_name(:youtube_id) %></th>
-      <th><%= model_class.human_attribute_name(:to_the_table) %></th>
-      <th><%= model_class.human_attribute_name(:compensation_method) %></th>
-      <th><%= model_class.human_attribute_name(:location) %></th>
-      <th><%= model_class.human_attribute_name(:tags) %></th>
-      <th><%= model_class.human_attribute_name(:coverimage) %></th>
-      <th><%= model_class.human_attribute_name(:logoimage) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-
-      <!-- Add Skills Needed -->
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-      </script><div class="spacer spacer-big"></div>
-    </tr>
-  </thead>
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.id %></td>
-        <td><%= post.project_name %></td>
-        <td><%= post.quick_pitch %></td>
-        <td><%= post.full_pitch %></td>
-        <td><%= post.youtube_id %></td>
-        <td><%= post.to_the_table %></td>
-        <td><%= post.compensation_method %></td>
-        <td><%= post.location %></td>
-        
-        <td><%= post.tags %></td>
-        <td><%=image_tag post.coverimage.url %></td>
-        <td><%=image_tag post.logoimage.url %></td>
-        <td><%=l post.created_at, format: :long %></td>
-        <td>
-          <%= link_to post_path(post), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
-            <%= glyph 'info-sign' %>
-            <%= glyph 'pencil' %>
-          <%- end -%>
-          <%= link_to post_path(post), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
-            <%= glyph 'remove' %>
-          <%- end -%>
-        </td>
-      </tr>
-
-    <% end %>
-  </tbody>
-</table>
-
-
-<% if user_signed_in? %>
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_post_path,
-            :class => 'btn btn-primary' %>
-<%else%>
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_user_session_path,
-            :class => 'btn btn-primary' %>
-<% end %></div>
-
-
-      </div></div></div></div>
-<script src="js/gridGallery.js"></script>
-            <script>
-        $( 'document' ).ready( function( ) {
-          //INITIALIZE THE PLUGIN
-          $( '#grid' ).grid( );
-
-        } );
-
-      </script>
