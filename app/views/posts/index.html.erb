@@ -66,10 +66,15 @@
 </table>
 
 
-
+<% if user_signed_in? %>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_post_path,
-            :class => 'btn btn-primary' %></div>
+            :class => 'btn btn-primary' %>
+<%else%>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_user_session_path,
+            :class => 'btn btn-primary' %>
+<% end %></div>
 
             <!-- Grid Gallery --> 
 
