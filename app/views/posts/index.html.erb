@@ -12,6 +12,138 @@
       </div>
     </div>
 <%- model_class = Post -%>
+
+
+<div class="spacer spacer-big"></div>
+    <div class="container" style="padding-right:50px;padding-left:50px;">
+
+      <div id="grid">
+
+        <div class="box" data-category="Drawings">
+          <div data-thumbnail="INSERT POST_LOGO">
+
+            <div class="box" data-category="Photography">
+          <div data-thumbnail="gallery/random/nature.jpg" ></div>
+
+          <div data-image="projectpage.html" ></div>
+
+          <div class="thumbnail-caption">
+            <h3g>
+              Nature
+            </h3g>
+            <br>
+            <h5g>
+              <i class="fa fa-map-marker"> </i> New York City</i>
+              <br>
+              <h6g>
+                We've all heard of the elevator pitch: the brief overview of a product or servicethat can be delivered in time it takes to ride an elevator.
+              </h6g>
+          </div>
+        </div>
+
+        <div class="box" data-category="Illustrations">
+          <div data-thumbnail="gallery/random/nonserif.jpg" ></div><div class="thumbnail-caption">
+            <h3g>
+              Non Serif
+            </h3g>
+            <br>
+            <h5g>
+              <i class="fa fa-map-marker"> </i> New York City</i>
+              <br>
+              <h6g>
+                We've all heard of the elevator pitch: the brief overview of a product or servicethat can be delivered in time it takes to ride an elevator.
+              </h6g>
+          </div>
+
+        </div>
+
+        <div class="box" data-category="Photography">
+          <div data-thumbnail="gallery/random/slingshot.jpg" ></div>
+
+          
+
+          <div class="thumbnail-caption">
+            <h3g>
+              Slingshot
+            </h3g>
+            <br>
+            <h5g>
+              <i class="fa fa-map-marker"> </i> New York City</i>
+              <br>
+              <h6g>
+                We've all heard of the elevator pitch: the brief overview of a product or servicethat can be delivered in time it takes to ride an elevator.
+              </h6g>
+          </div>
+
+          <div class="lightbox-text">
+            Yellow Lenses <span>In Photography</span>
+          </div>
+        </div>
+
+        <div class="box" data-category="Drawings">
+          <div data-thumbnail="gallery/random/logcabin.jpg" ></div>
+
+          <div class="thumbnail-caption">
+            <h3g>
+              A Snowy Log Cabin
+            </h3g>
+            <br>
+            <h5g>
+              <i class="fa fa-map-marker"> </i> Sydney,  Australia</i>
+              <br>
+              <h6g>
+                We are building a log cabin in the snowy mountains of Australia. Help us build it and stay for free every year!
+              </h6g>
+          </div>
+
+          <div class="lightbox-text">
+            Watercolor <span>In Drawings</span>
+          </div>
+        </div>
+
+        <div class="box" data-category="Illustrations">
+          <div data-thumbnail="gallery/random/stockphoto.jpg" ></div>
+
+          <div class="thumbnail-caption">
+            <h3g>
+              Stock Photo
+            </h3g>
+            <br>
+            <h5g>
+              <i class="fa fa-map-marker"> </i> New York City</i>
+              <br>
+              <h6g>
+                We've all heard of the elevator pitch: the brief overview of a product or servicethat can be delivered in time it takes to ride an elevator.
+              </h6g>
+          </div>
+
+          <div class="lightbox-text">
+            Muffin Bride <span>In Illustrations</span>
+          </div>
+        </div>
+
+        <div class="box" data-category="Photography">
+          <div data-thumbnail="gallery/Photography/thumbnails/Sunny Day.jpg" ></div>
+
+          <div data-image="gallery/Photography/Sunny Day.jpg" ></div>
+
+          <div class="thumbnail-caption">
+            <h3>Sunny Day</h3>
+            <h5>In Photography</h5>
+          </div>
+
+          <div class="lightbox-text">
+            Sunny Day <span>In Photography</span>
+          </div>
+        </div></div></div></div>
+
+
+
+
+
+
+
+
 <div class="page-header">
   <h4><%=t '.title', :default => Post %></h4>
 </div>
@@ -33,6 +165,7 @@
 
       <!-- Add Skills Needed -->
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      </script><div class="spacer spacer-big"></div>
     </tr>
   </thead>
   <tbody>
@@ -61,6 +194,7 @@
           <%- end -%>
         </td>
       </tr>
+
     <% end %>
   </tbody>
 </table>
@@ -71,19 +205,9 @@
             new_post_path,
             :class => 'btn btn-primary' %></div>
 
-            <!-- Grid Gallery --> 
-
-            <!-- GRID SEARCH -->
-    <div class="spacer spacer-big"></div>
-    <div class="container" style="padding-right:50px;padding-left:50px;">
-
-      <div id="grid">
-        <div class="box"
-
-
 
       </div></div></div></div>
-
+<script src="js/gridGallery.js"></script>
             <script>
         $( 'document' ).ready( function( ) {
           //INITIALIZE THE PLUGIN

@@ -50,7 +50,7 @@
 
               <p><%= @post.to_the_table %>
                 <br> <br> 
-                 <a href="#" class="sr-button sr-button5 big-button">JØIN TEAM</a> </div>
+                 </div>
 
                 <!-- END .main-content -->
 
@@ -64,7 +64,7 @@
                   <h4><strong><%= @post.project_name %></strong></h4></div>
                   <h6> <i class="fa fa-map-marker"> </i> <%= @post.location %></h6>
                   <h6> <i class="fa fa-link"> </i> Project URL Needed</h6>
-                  <h6> <i class="fa fa-clock-o"> </i><%= @post.created_at %></i>.</h6><br><br>
+                  <h6> <i class="fa fa-clock-o"> </i> <%= @post.created_at %></i>.</h6><br><br>
                   <p><!-- END LOCATION -->
                                   
                                    <!-- START QUICK PITCH -->
@@ -91,7 +91,7 @@
                     • Handyman                  </p><br>
                   </ul>
                                   <br>
-                                  <a data-toggle="modal" href="#apply" class="sr-button sr-button5 big-button">JØIN TEAM</a></p>
+                                  <a data-toggle="modal" href="#myModal" class="sr-button sr-button5 big-button">JØIN TEAM</a></p>
                                   
                                 
                     <!-- END COUNTDOWN -->
@@ -138,6 +138,19 @@
             <div class="spacer spacer-big"></div>
 
           </div>
+          <div class="modal hide" id="myModal"><!-- note the use of "hide" class -->
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>Join <%= @post.project_name %></h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="sr-button sr-button2 mini-button" data-dismiss="modal">Bail</a><!-- note the use of "data-dismiss" -->
+    <a href="#" class="sr-button sr-button5 mini-button">Join Team</a>
+  </div>
+</div>​
           <!-- END #portfolio-single .section-inner --><!-- END SECTION #portfolio-->
         <!-- PORTFOLIO SECTION -->
 
