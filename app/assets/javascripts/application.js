@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//=jquery-1.9.1.min.js
-//=jquery.modernizr.min.js
+//= jquery-1.9.1.min.js
+//= rotate-patch.js
+//= gridGallery.js
+//= gridGallery.min
+//= jquery.modernizr.min.js
 //= require_tree .

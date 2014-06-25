@@ -14,11 +14,8 @@ development:
   database: launcherr
   pool: 5
   username: root
-<<<<<<< HEAD
-  password: test
-=======
   password: root
->>>>>>> FETCH_HEAD
+
   host: localhost
 
 production:
@@ -27,11 +24,7 @@ production:
   database: launcherr
   pool: 5
   username: root
-<<<<<<< HEAD
-  password: test
-=======
   password: root
->>>>>>> FETCH_HEAD
   host: localhost
 #planbit_load
 #planbit3
