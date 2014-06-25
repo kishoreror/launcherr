@@ -13,6 +13,9 @@ development:
   encoding: utf8
   database: launcherr
   pool: 5
+  username: root
+  password: root
+
   host: localhost
 
 production:
@@ -20,6 +23,8 @@ production:
   encoding: utf8
   database: launcherr
   pool: 5
+  username: root
+  password: root
   host: localhost
 #planbit_load
 #planbit3
