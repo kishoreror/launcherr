@@ -15,7 +15,7 @@
         </p>
       </div>
     </div>
-
+<br> <br>
 
 <script>
 <link rel="stylesheet" href="assets/gridGallery.css" /> </script>
@@ -23,12 +23,17 @@
          <% @posts.each do |post| %>
         <div class="box" data-url="posts/<%=post.id%>" data-category="Illustrations">
  
-            <%=image_tag post.logoimage %>
+            <%=image_tag post.logoimage %> 
            
-            <div data-image="./assets/parallax-bg1.jpg" ></div>
+            <div data-image="./assets/bar.png" ></div>
             
             <div class="thumbnail-caption">
-                  <%= post.project_name %>
+                 <h3g> <%= post.project_name %></h3g>
+            <br>
+            <h5g><i class="fa fa-map-marker">  </i> <%= post.location %></h5g>
+              <br>
+             
+
             </div>
 
             <div class="lightbox-text">
@@ -36,7 +41,7 @@
             </div>
         </div>
         <%end%>
-
+<br>
 
 </div>
 
