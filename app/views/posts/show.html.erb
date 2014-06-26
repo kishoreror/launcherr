@@ -1,7 +1,10 @@
 
      <title><%= @post.project_name %>| Launcherr </title>
+      
+
       <!-- PAGEBODY -->
       <div class="page-body"></div>
+
         <!-- Cover Photo -->
         <div class="top-area">
           <%=image_tag @post.coverimage.url %></div>
@@ -31,12 +34,12 @@
               <div class="main-content left-float">
                 <!-- VIDEO SECTION -->
                 <div class="entry-media portfolio-media">
-                  <iframe width="400" height="230" src="https://www.kickstarter.com/projects/sdw/ride-north-a-moto-photographic-journey-from-sf-to/widget/video.html
+                  <iframe width="400" height="230" src="%= @post.youtube_id %>
                                     " frameborder="0" scrolling="no"> </iframe>
 
                 </div>
                 <!-- MAIN DESCRIPTION -->
-                <br> <h6><strong>About <%= @post.project_name %> </h6></strong>
+                <br> <h5><strong>About <%= @post.project_name %> </h6></strong>
 <br><%= @post.full_pitch %>
 <br>
 
@@ -60,17 +63,9 @@
                             
                 <!-- Start Location -->
                 <div class="entry-content portfolio-content">
-                
-                  <h4><strong><%= @post.project_name %></strong></h4></div>
-                  <h6> <i class="fa fa-map-marker"> </i> <%= @post.location %></h6>
-                  <h6> <i class="fa fa-link"> </i> <%= @post.url %></h6>
-                  <h6> <i class="fa fa-clock-o"> </i> <%= @post.created_at %></i>.</h6><br><br>
-                  <p><!-- END LOCATION -->
-                                  
-                                   <!-- START QUICK PITCH -->
-                                  <p> <%= @post.quick_pitch %> </p><br><br><br>
-                                  <!-- TEAM NEEDED -->
 
+                  <!-- TEAM NEEDED -->
+               <h4><strong><%= @post.project_name %></strong></h4></div><br>
                                   <div class="entry-content portfolio-content"> <h4><strong> Team Needed</strong></h4></div>
 
                   <ul>
@@ -92,6 +87,15 @@
                   </ul>
                                   <br>
                                   <a data-toggle="modal" href="#myModal" class="sr-button sr-button5 big-button">JØIN TEAM</a></p>
+                
+                 
+                  <h6> <i class="fa fa-map-marker"> </i> <%= @post.location %></h6>
+                  <h6> <i class="fa fa-link"> </i> <%= @post.url %></h6>
+                  <h6> <i class="fa fa-clock-o"> </i> <%= @post.created_at %></i>.</h6><br><br>
+                  <p><!-- END LOCATION -->
+                                  
+                        </p><br><br><br>
+                                  
                                   
                                 
                     <!-- END COUNTDOWN -->
@@ -106,19 +110,8 @@
                    
                 </div> <br><br>
 
-                  <!-- For Post Authors -->
-
-                   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_post_path(@post), :class => 'btn btn-default' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              post_path(@post),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
-                                  
                 
-                    
-                    <!-- In the future we will build a countdown & and insert it here. -->
+                                
                     <!-- End tag-widget -->
                                      
                                 

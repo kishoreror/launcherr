@@ -629,7 +629,7 @@
         var fixLoadMoreButton = function(result){
 
               if(result){
-                  loadMore.addClass('grid-loadMore').html('LOAD MORE IMAGES');
+                  loadMore.addClass('grid-loadMore').html('LOAD MORE PROJECTS');
               }else{
                   loadMore.removeClass('grid-loadMore').html('');
               }
