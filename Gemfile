@@ -33,6 +33,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -60,3 +61,4 @@ gem 'validates_formatting_of'
 gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'mailboxer'

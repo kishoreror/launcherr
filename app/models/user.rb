@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
 
   #->Prelang (user_login/devise)
   has_many :posts
+  acts_as_messageable
+
+  
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(provider: auth.provider, uid: auth.uid).first
 
@@ -38,4 +41,15 @@ class User < ActiveRecord::Base
 
   devise authentication_keys: [:login]
   acts_as_votable 
+
+  def name
+  return "You should add method :name in your Messageable model"
+end
+def mailboxer_email(object)
+  #Check if an email should be sent for that object
+  #if true
+  return "kishorecheruku.ror@gmail.com"
+  #if false
+  #return nil
+end
 end
