@@ -61,4 +61,5 @@ gem 'validates_formatting_of'
 gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'paperclip', github: 'thoughtbot/paperclip'
-gem 'mailboxer'
+
+

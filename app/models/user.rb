@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   #->Prelang (user_login/devise)
   has_many :posts
-  acts_as_messageable
+
 
   
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)

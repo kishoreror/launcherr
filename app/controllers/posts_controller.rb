@@ -11,6 +11,13 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def my_project
+   @user = User.find(current_user.id)
+    @posts = @user.posts
+  end
+
+
+
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -98,6 +105,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:project_name, :quick_pitch, :coverimage, :logoimage, :full_pitch, :user_id, :youtube_id, :to_the_table, :compensation_method, :location, :tags,:url)
+      params.require(:post).permit(:project_name, :quick_pitch, :coverimage, :logoimage, :full_pitch, :skills , :user_id, :youtube_id, :to_the_table, :compensation_method, :location, :tags,:url)
     end
 end

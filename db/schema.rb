@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140626163205) do
+ActiveRecord::Schema.define(version: 20140629175708) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -62,53 +62,10 @@ ActiveRecord::Schema.define(version: 20140626163205) do
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
-  create_table "mailboxer_conversation_opt_outs", force: true do |t|
-    t.integer "unsubscriber_id"
-    t.string  "unsubscriber_type"
-    t.integer "conversation_id"
-  end
-
-  add_index "mailboxer_conversation_opt_outs", ["conversation_id"], name: "mb_opt_outs_on_conversations_id", using: :btree
-
-  create_table "mailboxer_conversations", force: true do |t|
-    t.string   "subject",    default: ""
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-  end
-
-  create_table "mailboxer_notifications", force: true do |t|
-    t.string   "type"
+  create_table "messages", force: true do |t|
     t.text     "body"
-    t.string   "subject",              default: ""
-    t.integer  "sender_id"
-    t.string   "sender_type"
-    t.integer  "conversation_id"
-    t.boolean  "draft",                default: false
-    t.string   "notification_code"
-    t.integer  "notified_object_id"
-    t.string   "notified_object_type"
-    t.string   "attachment"
-    t.datetime "updated_at",                           null: false
-    t.datetime "created_at",                           null: false
-    t.boolean  "global",               default: false
-    t.datetime "expires"
+    t.datetime "created_at"
   end
-
-  add_index "mailboxer_notifications", ["conversation_id"], name: "index_mailboxer_notifications_on_conversation_id", using: :btree
-
-  create_table "mailboxer_receipts", force: true do |t|
-    t.integer  "receiver_id"
-    t.string   "receiver_type"
-    t.integer  "notification_id",                            null: false
-    t.boolean  "is_read",                    default: false
-    t.boolean  "trashed",                    default: false
-    t.boolean  "deleted",                    default: false
-    t.string   "mailbox_type",    limit: 25
-    t.datetime "created_at",                                 null: false
-    t.datetime "updated_at",                                 null: false
-  end
-
-  add_index "mailboxer_receipts", ["notification_id"], name: "index_mailboxer_receipts_on_notification_id", using: :btree
 
   create_table "posts", force: true do |t|
     t.string   "project_name"
@@ -131,9 +88,24 @@ ActiveRecord::Schema.define(version: 20140626163205) do
     t.integer  "logoimage_file_size"
     t.datetime "logoimage_updated_at"
     t.string   "url"
+    t.string   "skills"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+
+  create_table "receipts", force: true do |t|
+    t.integer  "recipient_id"
+    t.integer  "sender_id"
+    t.integer  "message_id"
+    t.boolean  "read",         default: false
+    t.boolean  "trash",        default: false
+    t.datetime "created_at"
+  end
+
+  add_index "receipts", ["recipient_id", "read", "message_id"], name: "by_read", using: :btree
+  add_index "receipts", ["recipient_id", "trash", "message_id"], name: "by_trashed", using: :btree
+  add_index "receipts", ["sender_id", "message_id"], name: "by_sender", using: :btree
+  add_index "receipts", ["sender_id", "recipient_id", "trash", "message_id"], name: "by_readable", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -172,11 +144,5 @@ ActiveRecord::Schema.define(version: 20140626163205) do
 
   add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
   add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
-
-  add_foreign_key "mailboxer_conversation_opt_outs", "mailboxer_conversations", name: "mb_opt_outs_on_conversations_id", column: "conversation_id"
-
-  add_foreign_key "mailboxer_notifications", "mailboxer_conversations", name: "notifications_on_conversation_id", column: "conversation_id"
-
-  add_foreign_key "mailboxer_receipts", "mailboxer_notifications", name: "receipts_on_notification_id", column: "notification_id"
 
 end

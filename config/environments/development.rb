@@ -27,6 +27,8 @@ Launcherr::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  
+
   #->Prelang
   GA.tracker = "INSERT WHEN LIVE"
 
