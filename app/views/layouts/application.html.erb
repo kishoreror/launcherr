@@ -68,9 +68,10 @@
 									
 											<li><%= link_to "My Account", edit_user_registration_path %></li>
 										</li>
-								<li><%= link_to "Inbox", destroy_user_session_path, method: :delete %></li>
+										<% x = 7 %>
+								<li><%= link_to "Inbox", inbox_posts_path %></li>
 									  </li>
-									 
+								<li><%= current_user.received_messages.count %></li> 
 											<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
 									  </li>
 								

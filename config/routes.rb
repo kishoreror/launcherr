@@ -2,6 +2,7 @@ Launcherr::Application.routes.draw do
   resources :posts  do  #->Prelang (voting/acts_as_votable)
   collection do
     get "my_project"
+    get "inbox"
   end
   member do
     get "vote"

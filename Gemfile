@@ -7,6 +7,7 @@ gem 'rails', '4.0.4'
 gem 'sqlite3'
 gem 'mysql2'
 
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -61,5 +62,5 @@ gem 'validates_formatting_of'
 gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'paperclip', github: 'thoughtbot/paperclip'
-
-
+gem 'acts-as-messageable', :git => 'git://github.com/hocza/acts-as-messageable.git'
+gem 'protected_attributes'
