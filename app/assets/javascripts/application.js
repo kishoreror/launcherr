@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap
 //= jquery-1.9.1.min.js
 //= rotate-patch.js
 //= gridGallery.js
