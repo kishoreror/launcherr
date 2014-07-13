@@ -69,7 +69,12 @@
                   <!-- Skill -->
                    <div class="entry-content portfolio-content"> <h4><strong> Skills </strong></h4></div>
                     <ul>
-                    <%= @post.skills %>
+                    <%#=raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')  %>
+                    <% @post.tag_list.each do |t|  %>
+                    <li><%= t %></li>
+                    <% end %>
+
+
                   </ul>
                   <!-- TEAM NEEDED -->
                <h4><strong><%= @post.project_name %></strong></h4></div><br>

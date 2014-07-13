@@ -1,4 +1,5 @@
 Launcherr::Application.routes.draw do
+  get 'tags/:tag', to: 'posts#index', as: :tag
   resources :posts  do  #->Prelang (voting/acts_as_votable)
   collection do
     get "my_project"
